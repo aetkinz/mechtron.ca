@@ -2,16 +2,16 @@
   (:require [mechtron.core :as m]
             [sass.core :refer :all]))
 
-(defn -sass
+(defn css
   []
-  (println "Compiling sass")
+  (println "Writing CSS to dist/static/css/style.css")
   (spit "dist/static/css/style.css"
     (render-file-path "resources/scss/style.scss"
                       :property-syntax :new :style :compressed)))
 
-(defn -html
+(defn html
   []
-  (println "Writing to dist/out.htm\n")
+  (println "Writing HTML to dist/out.htm\n")
   (spit "dist/out.htm"
     (str
       "<!doctype html>\n"
@@ -19,5 +19,5 @@
 
 (defn -main
   []
-  (-html)
-  (-sass))
+  (html)
+  (css))
