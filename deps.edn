@@ -1,0 +1,2 @@
+{:deps
+  {clj-template {:mvn/version "1.0.1"}}}
