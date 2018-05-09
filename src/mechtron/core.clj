@@ -43,7 +43,7 @@
     (h/head
       (h/meta- {:charset "utf-8"})
       (h/title (str "Mechtron Innovations Inc.: " title))
-      (h/link- {:href "static/style.css" :rel "stylesheet"}))
+      (h/link- {:href "static/css/style.css" :rel "stylesheet"}))
     (h/body
       (h/div {:class "layout"}
         (header)
