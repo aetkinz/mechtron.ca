@@ -1,0 +1,202 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    overflow-y: scroll;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.divMain {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+}
+
+#mainTable {
+    border: solid 1px #000;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 1024px;
+}
+
+#headerTable {
+    color: #000;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+    #headerTable td {
+        font-weight: bold;
+    }
+
+        #headerTable td a {
+            color: #000;
+            font-weight: bold;
+        }
+
+#headerTable td img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headerTd1 {
+    border-right: 1px solid #000;
+    width: 20%;
+}
+
+.headerTd2 {
+    text-align: center;
+    font-size: 20px;
+    border-right: 1px solid #000;
+    width: 60%;
+}
+
+.headerTd3 {
+    text-align: center;
+    width: 20%;
+}
+
+#menuTable {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 0px;
+}
+
+    #menuTable td {
+        width: 20%;
+        border: solid 1px #000;
+        border-collapse: collapse;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #B7063A;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+
+
+#contentTable {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 0px;
+    border-collapse: collapse
+}
+
+.homeDiv {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.homeTable {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1024px;
+    text-align: center;
+    border-spacing: 0px;
+    border-collapse: collapse
+}
+
+    .homeTable td {
+        text-align: center;
+        vertical-align: top;
+    }
+
+.homeDivBottom {
+    display: inline-block;
+    text-align: center;
+}
+
+    .homeDivBottom img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.productsTable {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1024px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.capabilitiesDiv {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.capabilitiesTable {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+    .capabilitiesTable td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+        text-align: left;
+    }
+
+.capabilitiesTableImgGrey {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 175px;
+    width: 144px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.capabilitiesTableImgBrown {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 186px;
+    width: 134px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.capabilitiesTableImgBlue {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 184px;
+    width: 135px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.capabilitiesTableImgGreen {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 184px;
+    width: 139px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contactTable {
+    width: 100%;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-collapse: collapse;
+    border-spacing: 0px
+}
