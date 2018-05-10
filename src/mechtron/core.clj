@@ -22,14 +22,14 @@
   []
   (h/header {:class "header"}
     (h/section {:class "header__logo logo"}
-      (h/a {:class "logo__link" :href "/"}
-        (h/h1 {:class "logo__title"}
+      (h/h1 {:class "logo__title"}
+        (h/a {:class "logo__link" :href "/"}
           (h/span {:class "logo__text"} "Mechtron Industries")
           (h/img- {:class "header__logo"
                    :src "static/images/mechtron_logo.jpg"
                    :alt "Mechtron Industries"}))))
     (h/section {:class "header__blurb blurb"}
-      (h/p {:class "blurb__text"} "Mechtron Innovations is You Supplier of Tubular Value Add Components, Sub Assemblies and Custom Tooling to the automative and Related Industries"))
+      (h/p {:class "blurb__text"} "Mechtron Innovations is Your Supplier of Tubular Value Add Components, Sub Assemblies and Custom Tooling to the Automative and Related Industries"))
     (h/section {:class "header__info"}
       (h/p {:class "header__contact"} "TS16949 / ISO 9001:2015")
       (h/p {:class "header__contact"} "519-624-9780")
