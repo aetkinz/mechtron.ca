@@ -222,3 +222,33 @@ a:hover {
 .column + .column {
   border-left: 1px solid black(100%);
 }
+
+.group {
+  margin-bottom: rems(32px);
+}
+
+.group__title {
+  margin-bottom: rems(20px);
+  @include arial-black;
+  font-size: rems(20px);
+}
+
+.text {
+  line-height: 1.5;
+}
+.text--margin_bottom {
+  margin-bottom: 1em;
+}
+
+.company {
+  padding: rems(20px) rems(80px);
+}
+
+.company-group {
+  margin-bottom: rems(20px);
+  line-height: 1.5;
+}
+.company-group__name {
+  font-size: rems(18px);
+  font-weight: bold;
+}

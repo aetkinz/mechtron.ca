@@ -20,7 +20,7 @@
       content
       "\n")))
 
-(defn -company
+(defn company
   []
   (column
    ["About" "Quality" "Corporate Group"]
@@ -28,7 +28,7 @@
            :alt "Manufactured parts on the left"
            :src "static/images/homepartleft.jpg"})))
 
-(defn -products
+(defn products
   []
   (column
     ["Stainless Exhaust Components"
@@ -44,7 +44,7 @@
      "Well Bore Slotted Liners"]
     nil))
 
-(defn -capabilities
+(defn capabilities
   []
   (column
     ["Value Chain"
@@ -60,7 +60,7 @@
      "Powder Coating"]
     nil))
 
-(defn -contact
+(defn contact
   []
   (column
    ["Sales Inquiries" "Canada" "Mexico"]
@@ -75,10 +75,10 @@
     "Home"
     (h/section {:class "home"}
       (h/ul {:class "columns"}
-        (-company)
-        (-products)
-        (-capabilities)
-        (-contact))
+        (company)
+        (products)
+        (capabilities)
+        (contact))
       (h/img {:class "columns__footer"
               :alt "Exhaust components on bottom of page"
               :src "static/images/homepartbottom.jpg"}))))
