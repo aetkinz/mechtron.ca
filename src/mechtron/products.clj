@@ -57,9 +57,9 @@
                  " product--slug_" slug
                  (when (or top left right)
                    " product--labels_absolute"))}
-    (h/img {:class "product__img"
-            :alt (or alt name)
-            :src (str "static/images/" img)})
+    (h/img- {:class "product__img"
+             :alt (or alt name)
+             :src (str "static/images/" img)})
     (when name
       (h/h2 {:class "product__title product__name"}
         name))

@@ -2,16 +2,17 @@
   (:require [clj-template.html5 :as h]
             [clojure.string :as str]))
 
-(def navbar {"company" "Company"
-             "products" "Products"
-             "capabilities" "Capabilities"
-             "contact" "Contact"})
+(def navbar {"/" "Home"
+             "company.htm" "Company"
+             "products.htm" "Products"
+             "capabilities.htm" "Capabilities"
+             "contact.htm" "Contact"})
 
 (defn navigation-item
   [selected [href title]]
-  (when-not (and (= selected href) (= selected "home"))
+  (when-not (and (= href "/") (= selected "home"))
     (h/li {:class (str "navbar__item" (when (= selected href) " navbar__selected"))}
-      (h/a {:class "navbar__link" :href (str href ".htm")} title))))
+      (h/a {:class "navbar__link" :href href} title))))
 
 (defn navigation
   [selected]
@@ -51,7 +52,7 @@
       (h/title (str "Mechtron Innovations Inc.: " title))
       (h/link- {:href "static/css/style.css" :rel "stylesheet"}))
     (h/body
-      (h/div {:class "layout"}
+      (h/div {:class (str "layout layout--page_" current-page)}
         (header)
         (navigation current-page)
         (h/div {:class "layout__main"}

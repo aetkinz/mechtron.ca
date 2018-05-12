@@ -24,9 +24,9 @@
   []
   (column
    ["About" "Quality" "Corporate Group"]
-   (h/img {:class "column__img column__img--pos_left"
-           :alt "Manufactured parts on the left"
-           :src "static/images/homepartleft.jpg"})))
+   (h/img- {:class "column__img column__img--pos_left"
+            :alt "Manufactured parts on the left"
+            :src "static/images/homepartleft.jpg"})))
 
 (defn products
   []
@@ -64,9 +64,9 @@
   []
   (column
    ["Sales Inquiries" "Canada" "Mexico"]
-   (h/img {:class "column__img column__img--pos_right"
-           :alt "Manufactured parts on the right"
-           :src "static/images/homepartright.jpg"})))
+   (h/img- {:class "column__img column__img--pos_right"
+            :alt "Manufactured parts on the right"
+            :src "static/images/homepartright.jpg"})))
 
 (defn home
   []
@@ -79,6 +79,6 @@
         (products)
         (capabilities)
         (contact))
-      (h/img {:class "columns__footer"
-              :alt "Exhaust components on bottom of page"
-              :src "static/images/homepartbottom.jpg"}))))
+      (h/img- {:class "columns__footer"
+               :alt "Exhaust components on bottom of page"
+               :src "static/images/homepartbottom.jpg"}))))

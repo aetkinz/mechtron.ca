@@ -103,6 +103,9 @@ a:hover {
   border: 1px solid #000;
   line-height: 1.3;
 }
+.layout--page_home .navbar__item {
+  width: 25%;
+}
 
 
 // Blocks
@@ -182,9 +185,10 @@ a:hover {
 }
 .navbar__item {
   display: table-cell;
-  width: 25%;
+  width: (1 / 5 * 100) * 1%;
   background: #bf0028;
-  text-align: center; }
+  text-align: center;
+}
 .navbar__item:hover {
   background: lighten(#bf0028, 10);
 }
@@ -283,4 +287,19 @@ a:hover {
 .product__title {
   @include arial-bold;
   font-size: rems(30px);
+}
+
+.capbilities__list {
+  display: table;
+  width: 100%;
+}
+.capability {
+  width: 25%;
+  display: table-cell;
+}
+.capability__arrow {
+  display: block;
+  width: rems(100px);
+  height: rems(90px);
+  background: #ccc;
 }
