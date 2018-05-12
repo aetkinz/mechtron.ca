@@ -1,8 +1,13 @@
 (ns build
   (:require [mechtron.home :refer [home]]
             [mechtron.company :refer [company]]
+            [mechtron.products :refer [products]]
             [sass.core :refer :all]
             :reload-all))
+
+(def pages {"index" home
+            "company" company
+            "products" products})
 
 (defn css
   []
@@ -14,7 +19,7 @@
 (defn html
   []
   (println "Writing HTML to dist/*.htm")
-  (doseq [[filename render-page] {"index" home "company" company}]
+  (doseq [[filename render-page] pages]
     (println (str "  -> Wrote dist/" filename ".htm"))
     (spit (str "dist/" filename ".htm")
       (str

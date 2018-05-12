@@ -80,7 +80,7 @@ are focused on our continued company growth.")
   (layout
    "company"
    "Company"
-   (h/section {:class "company"}
+   (h/section {:class "company page"}
      (about)
      (quality)
      (corporate))))

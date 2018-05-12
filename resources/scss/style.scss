@@ -240,7 +240,7 @@ a:hover {
   margin-bottom: 1em;
 }
 
-.company {
+.page {
   padding: rems(20px) rems(80px);
 }
 
@@ -251,4 +251,36 @@ a:hover {
 .company-group__name {
   font-size: rems(18px);
   font-weight: bold;
+}
+
+.product {
+  position: relative;
+  margin-bottom: rems(64px);
+  text-align: center;
+}
+.product--labels_absolute {
+  padding-top: rems(42px);
+  padding-bottom: rems(42px);
+}
+
+.product__top,
+.product__left,
+.product__right {
+  position: absolute;
+}
+.product__top {
+  top: 0;
+  left: 0;
+}
+.product__left {
+  bottom: 0;
+  left: 0;
+}
+.product__right {
+  bottom: 0;
+  right: 0;
+}
+.product__title {
+  @include arial-bold;
+  font-size: rems(30px);
 }
