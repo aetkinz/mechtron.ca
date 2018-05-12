@@ -9,8 +9,9 @@
 
 (defn navigation-item
   [selected [href title]]
-  (h/li {:class (str "navbar__item" (when (= selected href) " navbar__selected"))}
-    (h/a {:class "navbar__link" :href href} title)))
+  (when-not (and (= selected href) (= selected "home"))
+    (h/li {:class (str "navbar__item" (when (= selected href) " navbar__selected"))}
+      (h/a {:class "navbar__link" :href (str href ".htm")} title))))
 
 (defn navigation
   [selected]
@@ -25,20 +26,26 @@
       (h/h1 {:class "logo__title"}
         (h/a {:class "logo__link" :href "/"}
           (h/span {:class "logo__text"} "Mechtron Industries")
-          (h/img- {:class "header__logo"
+          (h/img- {:class "logo__img"
                    :src "static/images/mechtron_logo.jpg"
                    :alt "Mechtron Industries"}))))
     (h/section {:class "header__blurb blurb"}
-      (h/p {:class "blurb__text"} "Mechtron Innovations is Your Supplier of Tubular Value Add Components, Sub Assemblies and Custom Tooling to the Automative and Related Industries"))
+      (h/p {:class "blurb__text"}
+        (h/span {:class "line"}
+          "Mechtron Innovations is Your Supplier of Tubular")
+        (h/span {:class "line"}
+          "Value Add Components, Sub Assemblies and Custom")
+        (h/span {:class "line"}
+          "Tooling to the Automative and Related Industries")))
     (h/section {:class "header__info"}
-      (h/p {:class "header__contact"} "TS16949 / ISO 9001:2015")
-      (h/p {:class "header__contact"} "519-624-9780")
-      (h/a {:href "mailto:info@mechtron.ca"}
+      (h/p {:class "header__id"} "TS16949 / ISO 9001:2015")
+      (h/p {:class "header__phone"} "519-624-9780")
+      (h/a {:class "header__email" :href "mailto:info@mechtron.ca"}
         (h/img- {:alt "Email Mechtron Industries" :src "static/images/emailicon.jpg"})
-        "Email Us"))))
+        "Email Us Test"))))
 
 (defn layout
-  [page title content]
+  [current-page title content]
   (h/html
     (h/head
       (h/meta- {:charset "utf-8"})
@@ -47,6 +54,6 @@
     (h/body
       (h/div {:class "layout"}
         (header)
-        (navigation page)
+        (navigation current-page)
         (h/div {:class "layout__main"}
           content)))))

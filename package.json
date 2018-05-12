@@ -1,0 +1,30 @@
+{
+  "name": "mechtron.ca",
+  "version": "1.0.0",
+  "description": "Mechtron.ca website",
+  "main": "bs-config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aetkinz/mechtron.ca.git"
+  },
+  "keywords": [
+    "mechtron",
+    "website"
+  ],
+  "author": "David Howie <colorful@aetkinz.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/aetkinz/mechtron.ca/issues"
+  },
+  "homepage": "https://github.com/aetkinz/mechtron.ca#readme"
+}

@@ -1,6 +1,7 @@
 (ns watch
   (:require [hawk.core :as hawk]
-            [build]))
+            [build]
+            :reload-all))
 
 
 (defn -main
