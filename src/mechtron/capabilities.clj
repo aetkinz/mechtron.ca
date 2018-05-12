@@ -9,9 +9,7 @@
   (h/span {:class "line"} text))
 
 (def capabilities-list
-  [{:title [(line "Research")
-            (line "And")
-            (line "Development")]
+  [{:title ["Research" "And" "Development"]
     :slug "research-development"
     :features ["Engineering"
                "CAD Design"
@@ -19,7 +17,7 @@
                "3D Printing"
                "Prototyping"]
     :img ["research_development_cad.jpg"]}
-   {:title "Tooling And Equipment"
+   {:title ["Tooling" "And" "Equipment"]
     :slug "tooling"
     :features ["Design"
                "In House Build"
@@ -27,7 +25,7 @@
                "Machine Build"
                "Integration"]
     :img ["tooling.jpg"]}
-   {:title "Tube Value Add And Perforate"
+   {:title ["Tube" "Value Add" "And Perforate"]
     :slug "tube"
     :features ["Perforate"
                "Bending"
@@ -36,7 +34,7 @@
                "Machining"]
     :img ["3d_printer.jpg"
           "3d_prints.jpg"]}
-   {:title "Sub-Assembly And Quality Check"
+   {:title ["Sub-Assembly" "And" "Quality Check"]
     :slug "quality"
     :features ["Welding"
                "Coating"
@@ -61,12 +59,12 @@
   [{:keys [title slug features img]}]
   (h/li {:class (str "capability" " capability--slug_" slug)}
     (h/h2 {:class "capability__arrow"}
-      title)
+      (str/join "\n" (map line title)))
     (h/ul {:class "capability__features"}
       (str/join "\n" (map feature features)))
     (h/div {:class "capability__photos"}
       (str/join "\n"
-        (map #(capability-img title %) img)))))
+        (map #(capability-img (str/join " " title) %) img)))))
 
 (defn capabilities
   []

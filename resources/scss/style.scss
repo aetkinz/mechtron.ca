@@ -289,17 +289,68 @@ a:hover {
   font-size: rems(30px);
 }
 
-.capbilities__list {
+.capabilities__list {
   display: table;
   width: 100%;
 }
 .capability {
   width: 25%;
   display: table-cell;
+  padding-top: rems(60px);
 }
 .capability__arrow {
-  display: block;
+  position: relative;
+  display: table-cell;
+  left: rems(30px);
   width: rems(100px);
   height: rems(90px);
+  margin-bottom: rems(100px);
+  padding-left: rems(20px);
   background: #ccc;
+  font-size: rems(18px);
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.capability__arrow:after {
+  position: absolute;
+  top: rems(-45px);
+  right: rems(-135px);
+  width: 1px;
+  height: 1px;
+  border: rems(87.5px) solid transparent;
+  border-left-color: #ccc;
+  content: '';
+  z-index: -1;
+}
+.capability--slug_research-development .capability__arrow {
+  background: #a6a6a6;
+  &:after {
+    border-left-color: #a6a6a6;
+  }
+}
+.capability--slug_tooling .capability__arrow {
+  background: #ddae86;
+  &:after {
+    border-left-color: #ddae86;
+  }
+}
+.capability--slug_tube .capability__arrow {
+  background: #507fbc;
+  &:after {
+    border-left-color: #507fbc;
+  }
+}
+.capability--slug_quality .capability__arrow {
+  background: #b4c594;
+  &:after {
+    border-left-color: #b4c594;
+  }
+}
+.capability__features {
+  font-size: rems(18px);
+  margin-top: rems(60px);
+  margin-left: rems(60px);
+  margin-bottom: rems(60px);
+  list-style: disc;
 }
