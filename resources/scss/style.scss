@@ -88,6 +88,13 @@ body {
   color: black(100%);
 }
 
+a, a:active, a:link, a:visited {
+  color: #b7063a;
+}
+a:hover {
+  color: lighten(#b7063a, 10%);
+}
+
 // Layout
 // ---------------------------------------------------------------------------
 .layout {
@@ -127,12 +134,22 @@ body {
   white-space: nowrap;
   text-align: center;
 }
+.header__info .header__email {
+  color: black(100%);
+}
 .header__phone {
   @include arial-black;
 }
 .header__email {
   text-decoration: none;
-  color: black(100%);
+}
+.header__email:before {
+  display: inline-block;
+  width: rems(17px);
+  height: rems(12px);
+  margin-right: rems(5px);
+  background: url("../images/emailicon.jpg");
+  content: '';
 }
 
 .logo__link {
@@ -156,7 +173,6 @@ body {
   width: 100%;
   border-top: 1px solid black(100%);
   border-bottom: 1px solid black(100%);
-  background: #bf0028;
   @include arial-bold;
 }
 .navbar__items {
@@ -167,17 +183,22 @@ body {
 .navbar__item {
   display: table-cell;
   width: 25%;
-  text-align: center;
+  background: #bf0028;
+  text-align: center; }
+.navbar__item:hover {
+  background: lighten(#bf0028, 10);
 }
 .navbar__item + .navbar__item {
   border-left: 1px solid black(100%);
 }
-.navbar__link {
-  display: block;
-  padding: rems(5px);
+.navbar__item .navbar__link {
   color: black(100%);
-  font-size: rems(22px);
-  text-decoration: none;
+}
+.navbar__link {
+    display: block;
+    padding: rems(5px);
+    font-size: rems(22px);
+    text-decoration: none;
 }
 
 .columns {

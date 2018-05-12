@@ -41,8 +41,7 @@
       (h/p {:class "header__id"} "TS16949 / ISO 9001:2015")
       (h/p {:class "header__phone"} "519-624-9780")
       (h/a {:class "header__email" :href "mailto:info@mechtron.ca"}
-        (h/img- {:alt "Email Mechtron Industries" :src "static/images/emailicon.jpg"})
-        "Email Us Test"))))
+        "Email Us"))))
 
 (defn layout
   [current-page title content]
