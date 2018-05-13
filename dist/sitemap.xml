@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://mechtron.ca/</loc>
+  <lastmod>2018-03-21T16:24:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/index.htm</loc>
+  <lastmod>2018-03-21T16:24:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/company.htm</loc>
+  <lastmod>2018-03-21T16:24:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/products.htm</loc>
+  <lastmod>2018-03-21T16:24:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/capabilities.htm</loc>
+  <lastmod>2018-05-08T19:29:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/contact.htm</loc>
+  <lastmod>2018-03-21T16:24:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/static/pdfs/certificate_ts_646516_mechtron_mexico.pdf</loc>
+  <lastmod>2018-03-20T13:29:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://mechtron.ca/static/pdfs/fm_552295_new_2017.pdf</loc>
+  <lastmod>2018-03-20T13:29:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
