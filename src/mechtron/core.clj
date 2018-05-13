@@ -25,7 +25,7 @@
   (h/header {:class "header"}
     (h/section {:class "header__logo logo"}
       (h/h1 {:class "logo__title"}
-        (h/a {:class "logo__link" :href "/"}
+        (h/a {:class "logo__link" :href "./"}
           (h/span {:class "logo__text"} "Mechtron Industries")
           (h/img- {:class "logo__img"
                    :src "static/images/mechtron_logo.jpg"
