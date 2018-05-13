@@ -128,12 +128,13 @@ a:hover {
   border-left: 1px solid black(100%);
 }
 .header__logo {
+  width: 20%;
 }
 .header__blurb {
-  width: 100%;
+  width: 60%;
 }
 .header__info {
-  width: rems(204px);
+  width: 20%;
   white-space: nowrap;
   text-align: center;
 }
