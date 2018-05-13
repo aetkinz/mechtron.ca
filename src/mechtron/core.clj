@@ -51,7 +51,8 @@
       (h/meta- {:charset "utf-8"})
       (h/title (str "Mechtron Innovations Inc.: " title))
       (h/link- {:href "static/css/style.css" :rel "stylesheet"})
-      (h/meta- {:name "viewport" :content "width=device-width, initial-scale=1"}))
+      (h/meta- {:name "viewport" :content "width=device-width, initial-scale=1"})
+      (h/link- {:href "static/images/favicon.png" :rel "icon" :type "image/png"}))
     (h/body
       (h/div {:class (str "layout layout--page_" current-page)}
         (header)
