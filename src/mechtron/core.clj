@@ -2,7 +2,7 @@
   (:require [clj-template.html5 :as h]
             [clojure.string :as str]))
 
-(def navbar {"/" "Home"
+(def navbar {"./" "Home"
              "company.htm" "Company"
              "products.htm" "Products"
              "capabilities.htm" "Capabilities"
