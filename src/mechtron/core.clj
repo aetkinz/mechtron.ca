@@ -11,7 +11,7 @@
 (defn navigation-item
   [selected [href title]]
   (when-not (and (= title "Home") (= selected "home"))
-    (h/li {:class (str "navbar__item" (when (= selected href) " navbar__selected"))}
+    (h/li {:class (str "navbar__item" (when (str/starts-with? href selected) " navbar__selected"))}
       (h/a {:class "navbar__link" :href href} title))))
 
 (defn navigation

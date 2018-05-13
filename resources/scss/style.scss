@@ -198,6 +198,9 @@ a:hover {
 .navbar__item .navbar__link {
   color: black(100%);
 }
+.navbar__selected {
+  background: #fff;
+}
 .navbar__link {
     display: block;
     padding: rems(5px);
