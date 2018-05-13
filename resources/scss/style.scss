@@ -210,11 +210,7 @@ a:hover {
   background: url(../images/north_america.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-}
-
-.home {
-  background-size: 500px auto;
-  background-position: 50% rems(10px);
+  background-size: contain;
 }
 
 .columns {
@@ -371,7 +367,6 @@ a:hover {
   @include arial-black;
   font-size: rems(20px);
   text-align: center;
-  background-size: contain;
 }
 .contacts__sections {
   display: table;
