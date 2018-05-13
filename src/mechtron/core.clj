@@ -57,3 +57,7 @@
         (navigation current-page)
         (h/div {:class "layout__main"}
           content)))))
+
+(defn line
+  [text]
+  (h/span {:class "line"} text))

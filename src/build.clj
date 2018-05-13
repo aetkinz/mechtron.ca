@@ -3,13 +3,15 @@
             [mechtron.company :refer [company]]
             [mechtron.products :refer [products]]
             [mechtron.capabilities :refer [capabilities]]
+            [mechtron.contact :refer [contact]]
             [sass.core :refer :all]
             :reload-all))
 
 (def pages {"index" home
             "company" company
             "products" products
-            "capabilities" capabilities})
+            "capabilities" capabilities
+            "contact" contact})
 
 (defn css
   []

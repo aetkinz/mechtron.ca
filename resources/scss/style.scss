@@ -205,6 +205,18 @@ a:hover {
     text-decoration: none;
 }
 
+.home,
+.contacts {
+  background: url(../images/north_america.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.home {
+  background-size: 500px auto;
+  background-position: 50% rems(10px);
+}
+
 .columns {
   width: 100%;
   display: table;
@@ -350,7 +362,42 @@ a:hover {
 .capability__features {
   font-size: rems(18px);
   margin-top: rems(60px);
-  margin-left: rems(60px);
+  margin-left: rems(70px);
   margin-bottom: rems(60px);
   list-style: disc;
+}
+
+.contacts {
+  @include arial-black;
+  font-size: rems(20px);
+  text-align: center;
+  background-size: contain;
+}
+.contacts__sections {
+  display: table;
+  width: 100%;
+}
+.contacts__section {
+  display: table-row;
+}
+.contacts__header {
+  width: 100%;
+  padding-top: rems(32px);
+}
+
+.contact {
+  display: table-cell;
+  padding: rems(50px) 0;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.contact__mexico,
+.contact__canada {
+  border-top: 1px solid black(100%);
+}
+.contact__canada {
+  border-right: 1px solid black(100%);
+}
+.contact__title {
+  font-size: rems(24px);
 }

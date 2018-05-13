@@ -1,12 +1,8 @@
 (ns mechtron.capabilities
   (:require [clj-template.html5 :as h]
-            [mechtron.core :refer [layout]]
+            [mechtron.core :refer [layout line]]
             [clojure.string :as str]
             :reload-all))
-
-(defn line
-  [text]
-  (h/span {:class "line"} text))
 
 (def capabilities-list
   [{:title ["Research" "And" "Development"]
