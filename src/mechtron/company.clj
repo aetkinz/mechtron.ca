@@ -19,7 +19,8 @@ and Sub Assemblies to our Automotive tiered customer base. We offer customer des
 production APQP launch requirements. Mechtron designs our own processes and tooling with a focus on technology innovation, lean manufacturing and process
 flexibility. Our core business includes tube perforation / louvering, CNC bending, end sizing / ram forming, robotic welding,
 machining and final coating. Our experienced automotive management team, competitive cost structure and available capacity
-are focused on our continued company growth. We are conveniently located in Cambridge, Ontario, (off highway 401) and Saltillo Coahuila, Mexico.")))
+are focused on our continued company growth.")
+    (text "We are conveniently located in Cambridge, Ontario, (off highway 401) and Saltillo Coahuila, Mexico.")))
 
 (defn quality
   []
