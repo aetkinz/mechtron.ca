@@ -342,6 +342,7 @@ a:hover {
   font-weight: 600;
   white-space: nowrap;
   vertical-align: middle;
+  z-index: 2;
 }
 .capability__arrow:after {
   position: absolute;
@@ -352,6 +353,8 @@ a:hover {
   border: rems(87.5px) solid transparent;
   content: '';
   z-index: -1;
+}
+.capability__title {
 }
 .capability--slug_research-development .capability__arrow {
   background: #a6a6a6;

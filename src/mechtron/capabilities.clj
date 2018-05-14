@@ -50,7 +50,8 @@
   [{:keys [title slug features img]}]
   (h/li {:class (str "capability" " capability--slug_" slug)}
     (h/h2 {:class "capability__arrow"}
-      (str/join "\n" (map line title)))
+      (h/span {:class "capability__title"}
+        (str/join "\n" (map line title))))
     (h/ul {:class "capability__features"}
       (str/join "\n" (map feature features)))))
 
