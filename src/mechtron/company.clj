@@ -9,20 +9,16 @@
   (h/p {:class "text text--margin_bottom"}
     (str/join "\n" content)))
 
-
 (defn about
   []
   (h/section {:class "group"}
     (h/h2 {:class "group__title"}
       "About")
     (text "Mechtron Innovations celebrates our 20th anniversary as an innovative leader in the supply of Tubular Value Add Components
-and Sub Assemblies to our Automotive tiered customer base.")
-    (text "We offer customer design support, in house sample and prototype manufacturing and timely response to our customer
-production APQP launch requirements.")
-    (text "Mechtron designs our own processes and tooling with a focus on technology innovation, lean manufacturing and process
+and Sub Assemblies to our Automotive tiered customer base. We offer customer design support, in house sample and prototype manufacturing and timely response to our customer
+production APQP launch requirements. Mechtron designs our own processes and tooling with a focus on technology innovation, lean manufacturing and process
 flexibility. Our core business includes tube perforation / louvering, CNC bending, end sizing / ram forming, robotic welding,
-machining and final coating.")
-    (text "Our experienced automotive management team, competitive cost structure and available capacity
+machining and final coating. Our experienced automotive management team, competitive cost structure and available capacity
 are focused on our continued company growth.")
     (text "We are conveniently located in Cambridge, Ontario, (off highway 401) and Saltillo Coahuila, Mexico.")))
 
@@ -36,9 +32,10 @@ are focused on our continued company growth.")
       (h/a {:href "static/pdfs/certificate_ts_646516_mechtron_mexico.pdf" :target "_pdf_ts"}
         "TS16949: 2009")
       " and "
-      (h/a {:href "static/pdfs/fm_552295_new_2017.pdf" :target "_pdf_iso"}
-        "ISO 9001: 2015"))
-    (text "Our dedicated leadership and active participation of all employees insures our focus in achieving Total Customer Satisfaction.")))
+      (str (h/a {:href "static/pdfs/fm_552295_new_2017.pdf" :target "_pdf_iso"}
+             "ISO 9001: 2015")
+           ".")
+      "Our dedicated leadership and active participation of all employees insures our focus in achieving Total Customer Satisfaction.")))
 
 (defn company-group
   [{:keys [name description location website url]}]

@@ -212,12 +212,11 @@ a:hover {
 .home,
 .contacts {
   background: url(../images/north_america.jpg);
-  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .home {
-  background-size: 500px auto;
+  background-size: rems(500px) auto;
   background-position: 50% rems(10px);
 }
 
@@ -264,6 +263,10 @@ a:hover {
   padding: rems(20px) rems(80px);
 }
 
+.company {
+  padding-top: rems(38px);
+}
+
 .company-group {
   margin-bottom: rems(20px);
   line-height: 1.5;
@@ -289,7 +292,7 @@ a:hover {
   position: absolute;
 }
 .product__top {
-  top: 0;
+  top: rems(280px);
   left: 0;
 }
 .product__left {
@@ -302,7 +305,7 @@ a:hover {
 }
 .product__title {
   @include arial-bold;
-  font-size: rems(30px);
+  font-size: rems(22px);
 }
 
 .capabilities__arrows {
@@ -382,26 +385,38 @@ a:hover {
 }
 
 .contacts {
-  @include arial-black;
   font-size: rems(20px);
   text-align: center;
-  background-size: contain;
+  background-size: rems(650px);
+  background-position: 50% rems(-30px);
 }
 .contacts__sections {
-  display: table;
-  width: 100%;
+  @include arial-black;
 }
 .contacts__section {
-  display: table-row;
+  display: table;
+}
+.contacts__sales {
+  width: 70%;
+  margin: 0 auto;
+}
+.contacts__locations {
+  width: 100%;
 }
 .contacts__header {
   width: 100%;
+  font-weight: bold;
   padding-top: rems(32px);
+}
+.contacts__sales .contact {
+  padding: rems(32px) 0 rems(60px);
+}
+.contacts__locations .contact {
+  padding: rems(50px) 0;
 }
 
 .contact {
   display: table-cell;
-  padding: rems(50px) 0;
   line-height: 1.5;
   vertical-align: middle;
 }
