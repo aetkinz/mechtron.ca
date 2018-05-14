@@ -101,6 +101,7 @@ a:hover {
   margin: 0 auto;
   width: rems(1024px);
   border: 1px solid #000;
+  background: #fff;
   line-height: 1.3;
 }
 .layout--page_home .navbar__item {
@@ -339,6 +340,7 @@ a:hover {
   font-weight: 600;
   white-space: nowrap;
   vertical-align: middle;
+  z-index: 2;
 }
 .capability__arrow:after {
   position: absolute;
@@ -349,6 +351,8 @@ a:hover {
   border: rems(87.5px) solid transparent;
   content: '';
   z-index: -1;
+}
+.capability__title {
 }
 .capability--slug_research-development .capability__arrow {
   background: #a6a6a6;
