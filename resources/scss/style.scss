@@ -302,10 +302,24 @@ a:hover {
   font-size: rems(30px);
 }
 
-.capabilities__list {
+.capabilities__arrows {
   display: table;
   width: 100%;
 }
+.capabilities__photos {
+  margin-top: rems(32px);
+  padding: rems(32px) rems(22px);
+  border-top: 1px solid black(100%);
+  text-align: center;
+}
+.capabilities__photo {
+  display: inline-block;
+  vertical-align: middle;
+}
+.capabilities__photo + .capabilities__photo {
+  margin-left: rems(27px);
+}
+
 .capability {
   width: 25%;
   display: table-cell;
@@ -314,12 +328,10 @@ a:hover {
 .capability__arrow {
   position: relative;
   display: table-cell;
-  left: rems(30px);
+  left: rems(35px);
   width: rems(100px);
   height: rems(90px);
-  margin-bottom: rems(100px);
   padding-left: rems(20px);
-  background: #ccc;
   font-size: rems(18px);
   font-weight: 600;
   white-space: nowrap;
@@ -332,7 +344,6 @@ a:hover {
   width: 1px;
   height: 1px;
   border: rems(87.5px) solid transparent;
-  border-left-color: #ccc;
   content: '';
   z-index: -1;
 }
@@ -364,7 +375,6 @@ a:hover {
   font-size: rems(18px);
   margin-top: rems(60px);
   margin-left: rems(70px);
-  margin-bottom: rems(60px);
   list-style: disc;
 }
 
