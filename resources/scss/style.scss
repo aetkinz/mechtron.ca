@@ -145,9 +145,6 @@ a:hover {
 .header__phone {
   @include arial-black;
 }
-.header__email {
-  text-decoration: none;
-}
 .header__email:before {
   display: inline-block;
   width: rems(17px);
@@ -155,6 +152,10 @@ a:hover {
   margin-right: rems(5px);
   background: url("../images/emailicon.jpg");
   content: '';
+}
+.header__info a {
+  color: black;
+  text-decoration: none;
 }
 
 .logo__link {
