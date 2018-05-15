@@ -248,6 +248,7 @@ a:hover {
 .group__title {
   margin-bottom: rems(20px);
   @include arial-black;
+  font-weight: bold;
   font-size: rems(20px);
 }
 
@@ -262,7 +263,9 @@ a:hover {
   padding: rems(20px) rems(80px);
 }
 
+
 .company {
+  padding-right: 0;
   padding-top: rems(38px);
 }
 
