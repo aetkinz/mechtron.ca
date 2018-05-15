@@ -147,9 +147,6 @@ a:hover {
 .header__phone {
   @include arial-black;
 }
-.header__email {
-  text-decoration: none;
-}
 .header__email:before {
   display: inline-block;
   width: rems(17px);
@@ -157,6 +154,10 @@ a:hover {
   margin-right: rems(5px);
   background: url("../images/emailicon.jpg");
   content: '';
+}
+.header__info a {
+  color: black;
+  text-decoration: none;
 }
 
 .logo__link {
@@ -249,6 +250,7 @@ a:hover {
 .group__title {
   margin-bottom: rems(20px);
   @include arial-black;
+  font-weight: bold;
   font-size: rems(20px);
 }
 
@@ -263,7 +265,9 @@ a:hover {
   padding: rems(20px) rems(80px);
 }
 
+
 .company {
+  padding-right: 0;
   padding-top: rems(38px);
 }
 
@@ -311,6 +315,7 @@ a:hover {
 .capabilities__arrows {
   display: table;
   width: 100%;
+  overflow: hidden;
 }
 .capabilities__photos {
   margin-top: rems(32px);
