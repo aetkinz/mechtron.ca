@@ -309,6 +309,7 @@ a:hover {
 .capabilities__arrows {
   display: table;
   width: 100%;
+  overflow: hidden;
 }
 .capabilities__photos {
   margin-top: rems(32px);
