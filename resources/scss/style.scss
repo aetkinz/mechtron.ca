@@ -318,13 +318,16 @@ a:hover {
   overflow: hidden;
 }
 .capabilities__photos {
+  display: table;
+  width: 100%;
   margin-top: rems(32px);
-  padding: rems(32px) rems(22px);
+  margin-bottom: rems(22px);
+  padding-top: rems(32px);
   border-top: 1px solid black(100%);
   text-align: center;
 }
 .capabilities__photo {
-  display: inline-block;
+  display: table-cell;
   vertical-align: middle;
 }
 .capabilities__photo + .capabilities__photo {
@@ -358,8 +361,6 @@ a:hover {
   border: rems(87.5px) solid transparent;
   content: '';
   z-index: -1;
-}
-.capability__title {
 }
 .capability--slug_research-development .capability__arrow {
   background: #a6a6a6;
