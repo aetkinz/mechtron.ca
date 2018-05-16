@@ -159,6 +159,9 @@ a:hover {
   text-decoration: none;
 }
 
+.logo__img {
+  width: rems(180px);
+}
 .logo__link {
   display: block;
 }
@@ -171,7 +174,7 @@ a:hover {
 }
 
 .blurb {
-  font-size: rems(20px);
+  font-size: rems(22px);
   text-align: center;
 }
 
