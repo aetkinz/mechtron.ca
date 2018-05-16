@@ -1,5 +1,5 @@
 sync:
-	browser-sync start --config bs-config.js
+	npx browser-sync start --config bs-config.js
 make:
 	clj -m build
 watch:
