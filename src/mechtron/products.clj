@@ -4,9 +4,8 @@
             [clojure.string :as str]
             :reload-all))
 
-(def products-list [{:name "Stainless Steel Grades 304 - 441"
+(def products-list [{:name "Stainless Steel Grades 304 - 441 Resistance Welding"
                      :slug "steel"
-                     :description "Resistance Welding"
                      :img "stainless_steel_grads_304_441_resistance_welding.jpg"}
                     {:name "Perforate Bend Tangent and Bends"
                      :slug "bend"
@@ -14,9 +13,8 @@
                     {:name "CNC Bending - Multi Stack 1D (1 X Diameter)"
                      :slug "cnc-bending"
                      :img "cnc_bending_multi_stack_1d.jpg"}
-                    {:name "Severe Expansion and Reduction"
+                    {:name "Severe Expansion and Reduction Unique Hole and Slot Patterns"
                      :slug "severe-expansion"
-                     :description "Unique Hole and Slot Patterns"
                      :img "severe_expansion_reduction_unique_hole_slot_patterns.jpg"}
                     {:alt "Edge Rolling of Tube Ends (top), Ram Form Sizing (bottom left), Carbon Steel - Mechanical & DOM (bottom right)"
                      :slug "edge-rolling"
@@ -33,10 +31,8 @@
                     {:name "Powder Coating"
                      :slug "powder-coating"
                      :img "powder_coating.jpg"}
-                    {:name "Robotic MIG Welding"
+                    {:name "Robotic MIG Welding Assembly"
                      :slug "robotic-mig"
-                     :alt "Robotic MIG Welding Assembly"
-                     :description "Assembly"
                      :img "robotic_mig_welding_assembly.jpg"}
                     {:name "Perforation on Weld Seam"
                      :slug "weld-seam"
@@ -44,8 +40,7 @@
                     {:name "Minimal Deformation"
                      :slug "minimal-deformation"
                      :img "minimal_deformation.jpg"}
-                    {:name "Extrusions - Inward and Outward"
-                     :description "DF/WF Style Louvers"
+                    {:name "Extrusions - Inward and Outward DF/WF Style Louvers"
                      :slug "extrusions"
                      :alt "Extrusions - Inward and Outward DF/WF Style Louvers"
                      :img "extrusions_inward_outward_df_wf_louvers.jpg"}])
@@ -63,9 +58,6 @@
     (when name
       (h/h2 {:class "product__title product__name"}
         name))
-    (when description
-      (h/h2 {:class "product__title product__description"}
-        description))
     (when top
       (h/h2 {:class "product__title product__top"}
         top))

@@ -15,12 +15,13 @@ $base-font-size: 16px;
 }
 
 @mixin arial-narrow-bold {
-  font-family: "Arial Narrow", "Helvetica Light", Arial, Helvetica, sans-serif;
+  font-family: "Arial Narrow", "Helvetica Neue-Condensed", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 @mixin arial-black {
-  font-family: "Arial Black", "Helvetica Black", Arial, Helvetica, sans-serif;
+  font-family: "Arial Black", "Avenir Next Heavy", "Helvetica Black", Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 @mixin arial-bold {
   font-family: Arial, Helvetica, sans-serif;
@@ -101,6 +102,7 @@ a:hover {
   margin: 0 auto;
   width: rems(1024px);
   border: 1px solid #000;
+  background: #fff;
   line-height: 1.3;
 }
 .layout--page_home .navbar__item {
@@ -144,9 +146,6 @@ a:hover {
 .header__phone {
   @include arial-black;
 }
-.header__email {
-  text-decoration: none;
-}
 .header__email:before {
   display: inline-block;
   width: rems(17px);
@@ -154,6 +153,10 @@ a:hover {
   margin-right: rems(5px);
   background: url("../images/emailicon.jpg");
   content: '';
+}
+.header__info a {
+  color: black;
+  text-decoration: none;
 }
 
 .logo__link {
@@ -168,7 +171,7 @@ a:hover {
 }
 
 .blurb {
-  font-size: rems(22px);
+  font-size: rems(20px);
   text-align: center;
 }
 
@@ -190,9 +193,6 @@ a:hover {
   background: #bf0028;
   text-align: center;
 }
-.navbar__item:hover {
-  background: lighten(#bf0028, 10);
-}
 .navbar__item + .navbar__item {
   border-left: 1px solid black(100%);
 }
@@ -212,12 +212,11 @@ a:hover {
 .home,
 .contacts {
   background: url(../images/north_america.jpg);
-  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .home {
-  background-size: 500px auto;
+  background-size: rems(500px) auto;
   background-position: 50% rems(10px);
 }
 
@@ -250,6 +249,7 @@ a:hover {
 .group__title {
   margin-bottom: rems(20px);
   @include arial-black;
+  font-weight: bold;
   font-size: rems(20px);
 }
 
@@ -262,6 +262,12 @@ a:hover {
 
 .page {
   padding: rems(20px) rems(80px);
+}
+
+
+.company {
+  padding-right: 0;
+  padding-top: rems(38px);
 }
 
 .company-group {
@@ -289,7 +295,7 @@ a:hover {
   position: absolute;
 }
 .product__top {
-  top: 0;
+  top: rems(280px);
   left: 0;
 }
 .product__left {
@@ -302,13 +308,31 @@ a:hover {
 }
 .product__title {
   @include arial-bold;
-  font-size: rems(30px);
+  font-size: rems(22px);
 }
 
-.capabilities__list {
+.capabilities__arrows {
   display: table;
   width: 100%;
+  overflow: hidden;
 }
+.capabilities__photos {
+  display: table;
+  width: 100%;
+  margin-top: rems(32px);
+  margin-bottom: rems(22px);
+  padding-top: rems(32px);
+  border-top: 1px solid black(100%);
+  text-align: center;
+}
+.capabilities__photo {
+  display: table-cell;
+  vertical-align: middle;
+}
+.capabilities__photo + .capabilities__photo {
+  margin-left: rems(27px);
+}
+
 .capability {
   width: 25%;
   display: table-cell;
@@ -317,16 +341,15 @@ a:hover {
 .capability__arrow {
   position: relative;
   display: table-cell;
-  left: rems(30px);
+  left: rems(35px);
   width: rems(100px);
   height: rems(90px);
-  margin-bottom: rems(100px);
   padding-left: rems(20px);
-  background: #ccc;
   font-size: rems(18px);
   font-weight: 600;
   white-space: nowrap;
   vertical-align: middle;
+  z-index: 2;
 }
 .capability__arrow:after {
   position: absolute;
@@ -335,7 +358,6 @@ a:hover {
   width: 1px;
   height: 1px;
   border: rems(87.5px) solid transparent;
-  border-left-color: #ccc;
   content: '';
   z-index: -1;
 }
@@ -367,31 +389,46 @@ a:hover {
   font-size: rems(18px);
   margin-top: rems(60px);
   margin-left: rems(70px);
-  margin-bottom: rems(60px);
   list-style: disc;
 }
 
 .contacts {
-  @include arial-black;
   font-size: rems(20px);
   text-align: center;
-  background-size: contain;
+  background-size: rems(800px);
+  background-position: 50% rems(-140px);
 }
 .contacts__sections {
-  display: table;
-  width: 100%;
+  @include arial-black;
 }
 .contacts__section {
-  display: table-row;
+  display: table;
+}
+.contacts__sales {
+  width: 70%;
+  margin: 0 auto;
+}
+.contacts__locations {
+  width: 100%;
 }
 .contacts__header {
   width: 100%;
+  font-weight: bold;
   padding-top: rems(32px);
+}
+.contacts__title,
+.contact__title {
+  font-size: rems(24px);
+}
+.contacts__sales .contact {
+  padding: rems(32px) 0 rems(60px);
+}
+.contacts__locations .contact {
+  padding: rems(50px) 0;
 }
 
 .contact {
   display: table-cell;
-  padding: rems(50px) 0;
   line-height: 1.5;
   vertical-align: middle;
 }
@@ -401,7 +438,4 @@ a:hover {
 }
 .contact__canada {
   border-right: 1px solid black(100%);
-}
-.contact__title {
-  font-size: rems(24px);
 }

@@ -28,7 +28,7 @@
         (h/a {:class "logo__link" :href "./"}
           (h/span {:class "logo__text"} "Mechtron Industries")
           (h/img- {:class "logo__img"
-                   :src "static/images/mechtron_logo.jpg"
+                   :src "static/images/mechtron_logo.svg"
                    :alt "Mechtron Industries"}))))
     (h/section {:class "header__blurb blurb"}
       (h/p {:class "blurb__text"}
@@ -51,8 +51,8 @@
       (h/meta- {:charset "utf-8"})
       (h/title (str "Mechtron Innovations Inc.: " title))
       (h/link- {:href "static/css/style.css" :rel "stylesheet"})
-      (h/meta- {:name "viewport" :content "width=device-width, initial-scale=1"})
-      (h/link- {:href "static/images/favicon.png" :rel "icon" :type "image/png"}))
+      (h/link- {:href "static/images/favicon.png" :rel "icon" :type "image/png"})
+      (h/meta- {:name "viewport" :content "width=1024"}))
     (h/body
       (h/div {:class (str "layout layout--page_" current-page)}
         (header)
