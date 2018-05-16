@@ -83,6 +83,7 @@ table {
 // Base
 // ---------------------------------------------------------------------------
 body {
+  @include myriad-pro;
   background: black(15%);
   color: black(100%);
   padding: rems(1px);
