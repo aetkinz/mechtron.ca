@@ -447,3 +447,7 @@ a:hover {
 .contact__canada {
   border-right: 1px solid black(100%);
 }
+.contact__phone, .contact__phone a {
+  color: black(100%);
+  text-decoration: none;
+}
