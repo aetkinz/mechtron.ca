@@ -414,6 +414,10 @@ a:hover {
   font-weight: bold;
   padding-top: rems(32px);
 }
+.contacts__title,
+.contact__title {
+  font-size: rems(24px);
+}
 .contacts__sales .contact {
   padding: rems(32px) 0 rems(60px);
 }
@@ -432,7 +436,4 @@ a:hover {
 }
 .contact__canada {
   border-right: 1px solid black(100%);
-}
-.contact__title {
-  font-size: rems(24px);
 }
