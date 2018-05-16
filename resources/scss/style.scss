@@ -85,6 +85,7 @@ table {
 // ---------------------------------------------------------------------------
 body {
   color: black(100%);
+  padding: rems(1px);
 }
 
 a, a:active, a:link, a:visited {
@@ -100,6 +101,7 @@ a:hover {
 .layout {
   margin: 0 auto;
   width: rems(1024px);
+  box-sizing: border-box;
   border: 1px solid #000;
   background: #fff;
   line-height: 1.3;
