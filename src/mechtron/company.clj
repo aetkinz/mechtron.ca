@@ -33,7 +33,7 @@
       "Quality")
     (text
       (line (str
-             "Our Quality Management Systems comply with the International Standard"
+             "Our Quality Management Systems comply with the International Standard "
              (h/a {:href "static/pdfs/certificate_ts_646516_mechtron_mexico.pdf" :target "_pdf_ts"}
                   "TS16949: 2009")
              " and "
