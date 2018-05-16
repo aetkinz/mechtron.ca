@@ -395,8 +395,8 @@ a:hover {
 .contacts {
   font-size: rems(20px);
   text-align: center;
-  background-size: rems(650px);
-  background-position: 50% rems(-30px);
+  background-size: rems(800px);
+  background-position: 50% rems(-140px);
 }
 .contacts__sections {
   @include arial-black;
@@ -416,6 +416,10 @@ a:hover {
   font-weight: bold;
   padding-top: rems(32px);
 }
+.contacts__title,
+.contact__title {
+  font-size: rems(24px);
+}
 .contacts__sales .contact {
   padding: rems(32px) 0 rems(60px);
 }
@@ -434,7 +438,4 @@ a:hover {
 }
 .contact__canada {
   border-right: 1px solid black(100%);
-}
-.contact__title {
-  font-size: rems(24px);
 }
