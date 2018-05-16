@@ -15,12 +15,12 @@ $base-font-size: 16px;
 }
 
 @mixin arial-narrow-bold {
-  font-family: "Arial Narrow", "Helvetica Light", Arial, Helvetica, sans-serif;
+  font-family: "Arial Narrow", "Helvetica Neue-Condensed", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 @mixin arial-black {
-  font-family: "Arial Black", "Helvetica Black", Arial, Helvetica, sans-serif;
+  font-family: "Arial Black", "Avenir Next Heavy", "Helvetica Black", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 @mixin arial-bold {
@@ -172,7 +172,7 @@ a:hover {
 }
 
 .blurb {
-  font-size: rems(22px);
+  font-size: rems(20px);
   text-align: center;
 }
 
