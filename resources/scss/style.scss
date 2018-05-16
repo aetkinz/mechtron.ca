@@ -121,16 +121,16 @@ a:hover {
 .header__blurb,
 .header__info {
   display: table-cell;
-  padding: rems(0px) rems(10px);
   vertical-align: middle;
 }
 .header__blurb,
 .header__info {
-  @include arial-narrow-bold;
+  @include arial-bold;
   border-left: 1px solid black(100%);
 }
 .header__logo {
   width: 20%;
+  text-align: center;
 }
 .header__blurb {
   width: 60%;
@@ -159,7 +159,12 @@ a:hover {
   text-decoration: none;
 }
 
+.logo__title {
+  display: block;
+}
 .logo__img {
+  display: block;
+  margin: 0 auto;
   width: rems(180px);
 }
 .logo__link {
