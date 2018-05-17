@@ -188,9 +188,9 @@ a:hover {
   font-size: rems(20px);
 }
 
-@media all and (max-width: rems(1032px)) {
+@media (max-width: rems(1050px)) {
   .blurb__text {
-    font-size: rems(17px);
+    font-size: rems(14px);
   }
 }
 
@@ -284,7 +284,6 @@ a:hover {
 
 
 .company {
-  padding-right: 0;
   padding-top: rems(38px);
 }
 
