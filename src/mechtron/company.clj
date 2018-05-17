@@ -15,15 +15,10 @@
     (h/h2 {:class "group__title"}
       "About")
     (text
-     (line "Mechtron Innovations celebrates our 20th anniversary as an innovative leader in the supply of Tubular Value Add Components")
-     (line "and Sub Assemblies to our Automotive tiered customer base.")
-     (line "We offer customer design support, in house sample and prototype manufacturing and timely response to our customer")
-     (line "production APQP launch requirements.")
-     (line "Mechtron designs our own processes and tooling with a focus on technology innovation, lean manufacturing and process")
-     (line "flexibility. Our core business includes tube perforation / louvering, CNC bending, end sizing / ram forming, robotic welding,")
-     (line "machining and final coating.")
-     (line "Our experienced automotive management team, competitive cost structure and available capacity")
-     (line "are focused on our continued company growth.")
+     (line "Mechtron Innovations celebrates our 20th anniversary as an innovative leader in the supply of Tubular Value Add Components and Sub Assemblies to our Automotive tiered customer base.")
+     (line "We offer customer design support, in house sample and prototype manufacturing and timely response to our customer production APQP launch requirements.")
+     (line "Mechtron designs our own processes and tooling with a focus on technology innovation, lean manufacturing and process flexibility. Our core business includes tube perforation / louvering, CNC bending, end sizing / ram forming, robotic welding, machining and final coating.")
+     (line "Our experienced automotive management team, competitive cost structure and available capacity are focused on our continued company growth.")
      (line "We are conveniently located in Cambridge, Ontario, (off highway 401) and Saltillo Coahuila, Mexico."))))
 
 (defn quality
