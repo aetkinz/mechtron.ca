@@ -195,11 +195,13 @@ a:hover {
 }
 
 .navbar {
+  position: relative;
   display: table;
   width: 100%;
   border-top: 1px solid black(100%);
   border-bottom: 1px solid black(100%);
   @include arial-bold;
+  z-index: 3;
 }
 .navbar__items {
   display: table-row;
