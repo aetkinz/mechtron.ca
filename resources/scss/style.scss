@@ -84,6 +84,7 @@ table {
 // ---------------------------------------------------------------------------
 body {
   @include myriad-pro;
+  background: black(15%);
   color: black(100%);
   padding: rems(1px);
 }
@@ -186,14 +187,12 @@ a:hover {
 }
 .blurb__text {
   font-size: rems(20px);
+  text-size-adjust: 130%;
 }
 
 @media (max-device-width: 820px) {
   .blurb__text {
-    font-size: rems(14px);
-  }
-  .line {
-    display: inline;
+    font-size: rems(15px);
   }
 }
 
