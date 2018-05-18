@@ -190,7 +190,10 @@ a:hover {
 
 @media (max-device-width: 820px) {
   .blurb__text {
-    font-size: rems(13px);
+    font-size: rems(14px);
+  }
+  .line {
+    display: inline;
   }
 }
 
