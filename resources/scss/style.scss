@@ -188,9 +188,11 @@ a:hover {
   font-size: rems(20px);
 }
 
-@media (max-width: rems(1050px)) {
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .blurb__text {
-    font-size: rems(14px);
+    font-size: rems(16.5px);
   }
 }
 
