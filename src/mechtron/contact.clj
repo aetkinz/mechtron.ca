@@ -10,7 +10,7 @@
     (h/h3 {:class "contact__title"}
       "Exhaust Products")
     (line "Mary Ventimiglia")
-    (line "586-709-7547")
+    (h/span {:class "line contact__phone"} "586-709-7547")
     (h/a {:class "line contact__link"
           :href "mailto:mary.ventimiglia@mechtron.ca"}
       "mary.ventimiglia@mechtron.ca")))
@@ -21,7 +21,7 @@
     (h/h3 {:class "contact__title"}
       "Non-Exhaust Products")
     (line "Mark Dremak")
-    (line "226-820-5596")
+    (h/span {:class "line contact__phone"} "226-820-5596")
     (h/a {:class "line contact__link"
           :href "mailto:mark.dremak@mechtron.ca"}
       "mark.dremak@mechtron.ca")))
@@ -36,7 +36,7 @@
       (line "Cambridge ON N1R 8B7")
       (line "CANADA"))
     (h/span {:class "group"}
-      (line "519-624-9780")
+      (h/span {:class "line contact__phone"} "519-624-9780")
       (h/a {:class "line contact__link"
             :href "mailto:info@mechtron.ca"}
         "info@mechtron.ca"))))
@@ -51,7 +51,7 @@
       (line "Coahuila 25315")
       (line "MEXICO"))
     (h/span {:class "group"}
-      (line "519-624-9780")
+      (h/span {:class "line contact__phone"} "519-624-9780")
       (h/a {:class "line contact__link"
             :href "mailto:info@mechtron.ca"}
         "info@mechtron.ca"))))

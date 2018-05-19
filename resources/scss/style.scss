@@ -25,7 +25,7 @@ $base-font-size: 16px;
 }
 @mixin arial-bold {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 // Reset
@@ -62,7 +62,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
-  @include myriad-pro;
   line-height: 1;
 }
 ol, ul {
@@ -83,14 +82,16 @@ table {
 
 // Base
 // ---------------------------------------------------------------------------
-
 body {
-  font-size: 100%;
+  @include myriad-pro;
+  background: black(15%);
   color: black(100%);
+  padding: rems(1px);
 }
 
 a, a:active, a:link, a:visited {
   color: #b7063a;
+  text-decoration: none;
 }
 a:hover {
   color: lighten(#b7063a, 10%);
@@ -101,12 +102,16 @@ a:hover {
 .layout {
   margin: 0 auto;
   width: rems(1024px);
+  box-sizing: border-box;
   border: 1px solid #000;
   background: #fff;
   line-height: 1.3;
 }
 .layout--page_home .navbar__item {
   width: 25%;
+}
+.layout__main {
+  overflow: hidden;
 }
 
 
@@ -121,16 +126,16 @@ a:hover {
 .header__blurb,
 .header__info {
   display: table-cell;
-  padding: rems(0px) rems(10px);
   vertical-align: middle;
 }
 .header__blurb,
 .header__info {
-  @include arial-narrow-bold;
+  @include arial-bold;
   border-left: 1px solid black(100%);
 }
 .header__logo {
   width: 20%;
+  text-align: center;
 }
 .header__blurb {
   width: 60%;
@@ -156,9 +161,16 @@ a:hover {
 }
 .header__info a {
   color: black;
-  text-decoration: none;
 }
 
+.logo__title {
+  display: block;
+}
+.logo__img {
+  display: block;
+  margin: 0 auto;
+  width: rems(180px);
+}
 .logo__link {
   display: block;
 }
@@ -171,16 +183,22 @@ a:hover {
 }
 
 .blurb {
-  font-size: rems(20px);
   text-align: center;
+}
+.blurb__text {
+  font-size: rems(20px);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 .navbar {
+  position: relative;
   display: table;
   width: 100%;
   border-top: 1px solid black(100%);
   border-bottom: 1px solid black(100%);
   @include arial-bold;
+  z-index: 3;
 }
 .navbar__items {
   display: table-row;
@@ -203,10 +221,9 @@ a:hover {
   background: #fff;
 }
 .navbar__link {
-    display: block;
-    padding: rems(5px);
-    font-size: rems(22px);
-    text-decoration: none;
+  display: block;
+  padding: rems(5px);
+  font-size: rems(22px);
 }
 
 .home,
@@ -266,7 +283,6 @@ a:hover {
 
 
 .company {
-  padding-right: 0;
   padding-top: rems(38px);
 }
 
@@ -388,8 +404,7 @@ a:hover {
 .capability__features {
   font-size: rems(18px);
   margin-top: rems(60px);
-  margin-left: rems(70px);
-  list-style: disc;
+  margin-left: rems(55px);
 }
 
 .contacts {
@@ -438,4 +453,7 @@ a:hover {
 }
 .contact__canada {
   border-right: 1px solid black(100%);
+}
+.contact__phone, .contact__phone a {
+  color: black(100%);
 }
