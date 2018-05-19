@@ -187,13 +187,8 @@ a:hover {
 }
 .blurb__text {
   font-size: rems(20px);
-  text-size-adjust: 130%;
-}
-
-@media (max-device-width: 820px) {
-  .blurb__text {
-    font-size: rems(15px);
-  }
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 .navbar {
