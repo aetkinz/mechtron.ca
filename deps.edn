@@ -2,6 +2,6 @@
   {clj-template {:mvn/version "1.0.1"}
    github-jayzawrotny/sass {:git/url "https://github.com/jayzawrotny/sass-clojure"
                             :sha "caca390365ff94bbd054b3a1daccb6b2205fc22f"}
-   hawk {:mvn/version "0.2.11"}
-   clj-http {:mvn/version "3.9.0"}
-   cheshire {:mvn/version "5.8.0"}}}
+   github-jayzawrotny/deploy {:git/url "https://github.com/jayzawrotny/php-deployer"
+                              :sha "e4cd7600e1cad2c43d15409761298c2317840f32"}
+   hawk {:mvn/version "0.2.11"}}}

@@ -1,19 +1,20 @@
 (ns deploy
-  (:require [clj-http.client :as client]))
+  (:require [deploy :refer :all]))
 
-(defn create-post-body
-  [dest-dir branch]
-  {:dest_dir dest_dir
-   :src_dir "dist"
-   :branch branch
-   :repo "aetkinz/mechtron.ca"})
+(def *config* (read-string (slurp "deploy.secret.edn")))
 
-(defn deploy
-  [body]
-  (client/post "http://dev.aetkinz.com/mechtron" {:form-params body
-                                                  :content-type :json}))
+(defn configure-deploy
+  [target-key config]
+  (let [target (get-in config [:targets (keyword target-key)])]
+    {:repo (:repo config)
+     :branch (:branch target)
+     :src-dir (:src-dir config)
+     :dest-dir (:dest-dir target)}))
+
 
 (defn -main
-  [& {:keys dest-dir branch}]
-  (->> (create-post-body dest-dir branch)
-       (deploy)))
+  [target]
+  (let [deploy-spec (configure-deploy target *config*)
+        server-url (:server-url config)
+                   (:private-key config)]
+    (deploy server-url private-key deploy-spec)))
