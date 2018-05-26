@@ -1,7 +1,7 @@
 (ns deploy
-  (:require [deploy :refer :all]))
+  (:require [deploy.client.core :as d]))
 
-(def *config* (read-string (slurp "deploy.secret.edn")))
+(def dev-config (read-string (slurp "deploy.secret.edn")))
 
 (defn configure-deploy
   [target-key config]
@@ -14,7 +14,7 @@
 
 (defn -main
   [target]
-  (let [deploy-spec (configure-deploy target *config*)
-        server-url (:server-url config)
-                   (:private-key config)]
-    (deploy server-url private-key deploy-spec)))
+  (let [deploy-spec (configure-deploy target dev-config)
+        server-url (:server-url dev-config)
+        private-key (:private-key dev-config)]
+    (d/deploy server-url private-key deploy-spec)))
