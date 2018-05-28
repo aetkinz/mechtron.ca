@@ -1,3 +1,459 @@
-.body {
-  background: #c00;
+// Mixins
+// ---------------------------------------------------------------------------
+$base-font-size: 16px;
+
+@function rems($x) {
+  @return $x / $base-font-size * 1rem;
+}
+@function black($percent) {
+  @return darken(#fff, $percent);
+}
+
+@mixin myriad-pro {
+  font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+@mixin arial-narrow-bold {
+  font-family: "Arial Narrow", "Helvetica Neue-Condensed", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@mixin arial-black {
+  font-family: "Arial Black", "Avenir Next Heavy", "Helvetica Black", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+@mixin arial-bold {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+// Reset
+// ---------------------------------------------------------------------------
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Base
+// ---------------------------------------------------------------------------
+body {
+  @include myriad-pro;
+  background: black(15%);
+  color: black(100%);
+  padding: rems(1px);
+}
+
+a, a:active, a:link, a:visited {
+  color: #b7063a;
+  text-decoration: none;
+}
+a:hover {
+  color: lighten(#b7063a, 10%);
+}
+
+// Layout
+// ---------------------------------------------------------------------------
+.layout {
+  margin: 0 auto;
+  width: rems(1024px);
+  box-sizing: border-box;
+  border: 1px solid #000;
+  background: #fff;
+  line-height: 1.3;
+}
+.layout--page_home .navbar__item {
+  width: 25%;
+}
+.layout__main {
+  overflow: hidden;
+}
+
+
+// Blocks
+// ---------------------------------------------------------------------------
+
+.header {
+  width: 100%;
+  display: table;
+}
+.header__logo,
+.header__blurb,
+.header__info {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header__blurb,
+.header__info {
+  @include arial-bold;
+  border-left: 1px solid black(100%);
+}
+.header__logo {
+  width: 20%;
+  text-align: center;
+}
+.header__blurb {
+  width: 60%;
+}
+.header__info {
+  width: 20%;
+  white-space: nowrap;
+  text-align: center;
+}
+.header__info .header__email {
+  color: black(100%);
+}
+.header__phone {
+  @include arial-black;
+}
+.header__email:before {
+  display: inline-block;
+  width: rems(17px);
+  height: rems(12px);
+  margin-right: rems(5px);
+  background: url("../images/emailicon.jpg");
+  content: '';
+}
+.header__info a {
+  color: black;
+}
+
+.logo__title {
+  display: block;
+}
+.logo__img {
+  display: block;
+  margin: 0 auto;
+  width: rems(180px);
+}
+.logo__link {
+  display: block;
+}
+.logo__text {
+  display: none;
+}
+
+.line {
+  display: block;
+}
+
+.blurb {
+  text-align: center;
+}
+.blurb__text {
+  font-size: rems(20px);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+.navbar {
+  position: relative;
+  display: table;
+  width: 100%;
+  border-top: 1px solid black(100%);
+  border-bottom: 1px solid black(100%);
+  @include arial-bold;
+  z-index: 3;
+}
+.navbar__items {
+  display: table-row;
+  width: 100%;
+  justify-content: center;
+}
+.navbar__item {
+  display: table-cell;
+  width: (1 / 5 * 100) * 1%;
+  background: #bf0028;
+  text-align: center;
+}
+.navbar__item + .navbar__item {
+  border-left: 1px solid black(100%);
+}
+.navbar__item .navbar__link {
+  color: black(100%);
+}
+.navbar__selected {
+  background: #fff;
+}
+.navbar__link {
+  display: block;
+  padding: rems(5px);
+  font-size: rems(22px);
+}
+
+.home,
+.contacts {
+  background: url(../images/north_america.jpg);
+  background-repeat: no-repeat;
+}
+
+.home {
+  background-size: rems(500px) auto;
+  background-position: 50% rems(10px);
+}
+
+.columns {
+  width: 100%;
+  display: table;
+  text-align: center;
+}
+.column {
+  width: 25%;
+  display: table-cell;
+  padding-top: rems(20px);
+}
+.column__img {
+  display: block;
+  margin: 0 auto;
+  margin-top: rems(20px);
+}
+.column__item {
+  line-height: 2.25;
+}
+.column + .column {
+  border-left: 1px solid black(100%);
+}
+
+.group {
+  margin-bottom: rems(32px);
+}
+
+.group__title {
+  margin-bottom: rems(20px);
+  @include arial-black;
+  font-weight: bold;
+  font-size: rems(20px);
+}
+
+.text {
+  line-height: 1.5;
+}
+.text--margin_bottom {
+  margin-bottom: 1em;
+}
+
+.page {
+  padding: rems(20px) rems(80px);
+}
+
+
+.company {
+  padding-top: rems(38px);
+}
+
+.company-group {
+  margin-bottom: rems(20px);
+  line-height: 1.5;
+}
+.company-group__name {
+  font-size: rems(18px);
+  font-weight: bold;
+}
+
+.product {
+  position: relative;
+  margin-bottom: rems(64px);
+  text-align: center;
+}
+.product--labels_absolute {
+  padding-top: rems(42px);
+  padding-bottom: rems(42px);
+}
+
+.product__top,
+.product__left,
+.product__right {
+  position: absolute;
+}
+.product__top {
+  top: rems(280px);
+  left: 0;
+}
+.product__left {
+  bottom: 0;
+  left: 0;
+}
+.product__right {
+  bottom: 0;
+  right: 0;
+}
+.product__title {
+  @include arial-bold;
+  font-size: rems(22px);
+}
+
+.capabilities__arrows {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+.capabilities__photos {
+  display: table;
+  width: 100%;
+  margin-top: rems(32px);
+  margin-bottom: rems(22px);
+  padding-top: rems(32px);
+  border-top: 1px solid black(100%);
+  text-align: center;
+}
+.capabilities__photo {
+  display: table-cell;
+  vertical-align: middle;
+}
+.capabilities__photo + .capabilities__photo {
+  margin-left: rems(27px);
+}
+
+.capability {
+  width: 25%;
+  display: table-cell;
+  padding-top: rems(60px);
+}
+.capability__arrow {
+  position: relative;
+  display: table-cell;
+  left: rems(35px);
+  width: rems(100px);
+  height: rems(90px);
+  padding-left: rems(20px);
+  font-size: rems(18px);
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: middle;
+  z-index: 2;
+}
+.capability__arrow:after {
+  position: absolute;
+  top: rems(-45px);
+  right: rems(-135px);
+  width: 1px;
+  height: 1px;
+  border: rems(87.5px) solid transparent;
+  content: '';
+  z-index: -1;
+}
+.capability--slug_research-development .capability__arrow {
+  background: #a6a6a6;
+  &:after {
+    border-left-color: #a6a6a6;
+  }
+}
+.capability--slug_tooling .capability__arrow {
+  background: #ddae86;
+  &:after {
+    border-left-color: #ddae86;
+  }
+}
+.capability--slug_tube .capability__arrow {
+  background: #507fbc;
+  &:after {
+    border-left-color: #507fbc;
+  }
+}
+.capability--slug_quality .capability__arrow {
+  background: #b4c594;
+  &:after {
+    border-left-color: #b4c594;
+  }
+}
+.capability__features {
+  font-size: rems(18px);
+  margin-top: rems(60px);
+  margin-left: rems(55px);
+}
+
+.contacts {
+  font-size: rems(20px);
+  text-align: center;
+  background-size: rems(800px);
+  background-position: 50% rems(-140px);
+}
+.contacts__sections {
+  @include arial-black;
+}
+.contacts__section {
+  display: table;
+}
+.contacts__sales {
+  width: 70%;
+  margin: 0 auto;
+}
+.contacts__locations {
+  width: 100%;
+}
+.contacts__header {
+  width: 100%;
+  font-weight: bold;
+  padding-top: rems(32px);
+}
+.contacts__title,
+.contact__title {
+  font-size: rems(24px);
+}
+.contacts__sales .contact {
+  padding: rems(32px) 0 rems(60px);
+}
+.contacts__locations .contact {
+  padding: rems(50px) 0;
+}
+
+.contact {
+  display: table-cell;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.contact__mexico,
+.contact__canada {
+  border-top: 1px solid black(100%);
+}
+.contact__canada {
+  border-right: 1px solid black(100%);
+}
+.contact__phone, .contact__phone a {
+  color: black(100%);
 }
