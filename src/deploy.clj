@@ -8,7 +8,8 @@
   Returns a hash-map with repo, branch, src-dir, and dest-dir keys."
   [target-key config]
   (if-let [target (get-in config [:targets (keyword target-key)])]
-    {:repo (:repo config)
+    {:name "mechtron"
+     :repo (:repo config)
      :branch (:branch target)
      :src_dir (:src-dir config)
      :dest_dir (:dest-dir target)}
