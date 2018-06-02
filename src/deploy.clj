@@ -1,5 +1,5 @@
 (ns deploy
-  (:require [deploy.client.core :as d]))
+  (:require [clj-deploy.client :refer [deploy!]]))
 
 (def dev-config (read-string (slurp "deploy.secret.edn")))
 
@@ -10,8 +10,8 @@
   (if-let [target (get-in config [:targets (keyword target-key)])]
     {:repo (:repo config)
      :branch (:branch target)
-     :src-dir (:src-dir config)
-     :dest-dir (:dest-dir target)}
+     :src_dir (:src-dir config)
+     :dest_dir (:dest-dir target)}
     {:error (format "Could not find target \"%s\"." target-key)}))
 
 (defn -main
@@ -24,4 +24,7 @@
         private-key (:private-key dev-config)]
     (if (contains? deploy-spec :error)
       (println deploy-spec)
-      (d/deploy! server-url private-key deploy-spec))))
+      (do
+        (println (format "Deploying to %s" target))
+        (->> (deploy! server-url private-key [:repo :branch] deploy-spec)
+             (clojure.pprint/pprint))))))
